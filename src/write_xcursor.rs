@@ -144,7 +144,7 @@ impl Xcursor {
 
     pub(crate) fn write_to(&self, mut writer: impl Write) -> anyhow::Result<()> {
         writer.write_all(XCURSOR_MAGIC)?;
-        writer.write_u32::<LittleEndian>(16)?;
+        writer.write_u32::<LittleEndian>(HEADER_BYTE_LENGTH)?;
         // File version, taken from a random Xcursor (perhaps it's 2 bytes for major, 2 bytes for minor?)
         writer.write_u32::<LittleEndian>(0x00010000)?;
         writer.write_u32::<LittleEndian>(self.table_of_contents.len().try_into()?)?;

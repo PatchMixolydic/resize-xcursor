@@ -2,7 +2,7 @@
 A convenient little command line utility I hacked together to resize [Xcursor files].
 This might be useful if you want to use an old X11 cursor theme on a HiDPI display.
 
-Note that this utility currently only supports integer scales larger than 100%.
+Note that this utility currently only supports integer scales greater than (or equal to) 100%.
 
 [Xcursor files]: https://man.archlinux.org/man/extra/libxcursor/Xcursor.3.en#CURSOR_FILES
 

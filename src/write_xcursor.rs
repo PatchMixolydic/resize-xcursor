@@ -118,8 +118,6 @@ impl Xcursor {
             next_chunk_position: 0,
         };
 
-        // `header_byte_length` shouldn't fail since `res.table_of_contents` is empty.
-        // The next chunk position will be shifted right by the new table of contents entry.
         res.next_chunk_position = HEADER_BYTE_LENGTH + TocEntry::BYTE_LENGTH;
         res
     }

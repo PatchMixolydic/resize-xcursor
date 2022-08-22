@@ -74,7 +74,10 @@ fn main() -> anyhow::Result<()> {
                     continue;
                 }
 
-                bail!("{} doesn't seem to be a valid Xcursor file", input_filename.display());
+                bail!(
+                    "{} doesn't seem to be a valid Xcursor file",
+                    input_filename.display()
+                );
             }
         };
 
